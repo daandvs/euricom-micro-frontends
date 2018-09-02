@@ -1,0 +1,8 @@
+.dealers-container {
+  padding: 10px;
+}
+
+.dealers-scroll-wrapper {
+  overflow: auto;
+  white-space: nowrap;
+}

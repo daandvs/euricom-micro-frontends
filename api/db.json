@@ -1,0 +1,54 @@
+{
+  "dealers": [
+    {
+      "id": 1,
+      "name": "Heisenberg",
+      "img": "heisenberg.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Salamanca Brothers",
+      "img": "salamanca.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Gustavo Fring",
+      "img": "gustavo.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Hector",
+      "img": "hector.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Crystal Meth",
+      "price": "3.5",
+      "dealerId": 1,
+      "img": "crystal.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Pot",
+      "price": "4",
+      "dealerId": 2,
+      "img": "pot.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Los Pollos Hermanos Special",
+      "price": "6",
+      "dealerId": 3,
+      "img": "hermanos.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Blue Sky",
+      "price": "2",
+      "dealerId": 4,
+      "img": "blue.png"
+    }
+  ]
+}
