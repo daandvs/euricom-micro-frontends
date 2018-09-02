@@ -10,7 +10,7 @@ module.exports = {
     historyApiFallback: true,
     compress: true,
     before: (app) => {
-      app.use('/products', express.static('./dist'));
+      app.use('/products', express.static('./'));
     }
   },
   module: {

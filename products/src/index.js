@@ -11,8 +11,6 @@ class Products extends HTMLElement {
     this.root = null;
   }
 
-  static get observedAttributes() { return ['dealer']; }
-
   connectedCallback() {
     this.root = document.getElementById('root');
     if (!this.root) {
@@ -20,18 +18,16 @@ class Products extends HTMLElement {
       this.root.setAttribute('id', 'root');
       this.appendChild(this.root);
     }
+
+    this.render();
   }
 
   disconnectedCallback() {
 
   }
 
-  attributeChangedCallback(attr, oldValue, newValue) {
-    this.render();
-  }
-
   render() {
-    const dealerId = this.getAttribute('dealer');
+    const dealerId = 1;
     fetch(`http://localhost:3005/products?dealerId=${dealerId}`)
       .then((response) => {
         return response.json();

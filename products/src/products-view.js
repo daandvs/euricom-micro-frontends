@@ -18,7 +18,7 @@ export default class ProductsView extends React.Component {
       }, [
         React.createElement('img', {
           className: 'card-img-top',
-          src: `/products/assets/images/${product.img}`,
+          src: `/products/dist/assets/images/${product.img}`,
           style: {
             height: '100px',
             objectFit: 'cover'
@@ -32,7 +32,7 @@ export default class ProductsView extends React.Component {
             key: `product-btn-${product.id}`,
             className: 'btn btn-success',
             onClick: () => {
-              window.dispatchEvent(new CustomEvent('product:added', { detail: product }));
+              console.log('[PRODUCT] clicked', product);
             }
           }, `Buy for only $${product.price}`)
         ])]);
