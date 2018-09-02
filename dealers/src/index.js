@@ -47,7 +47,7 @@ class Dealers extends HTMLElement {
   onButtonClicked(ev) {
     const dealerId = ev.target.getAttribute('data-dealer-id');
     console.log('[DEALER] clicked', dealerId);
-    window.dispatchEvent(new CustomEvent('dealer:clicked', { detail: { dealerId } }));
+    window.history.pushState({ dealerId }, 'dealer', `/dealer/${dealerId}`);
   }
 }
 
