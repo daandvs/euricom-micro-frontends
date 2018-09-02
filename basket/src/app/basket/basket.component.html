@@ -1,0 +1,12 @@
+<h3>Basket</h3>
+
+<div *ngIf="products.length === 0; else productsView">
+  Your cart is empty!
+</div>
+
+<ng-template #productsView>
+  <div *ngFor="let product of products" style="display: flex; align-items: center; margin-bottom: 5px;">
+    <span style="margin-right: 15px;">{{ product.name }} - ${{ product.price }}</span>
+    <button class="btn btn-danger" (click)="remove(product)">remove</button>
+  </div>
+</ng-template>
