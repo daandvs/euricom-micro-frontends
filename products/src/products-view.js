@@ -33,6 +33,7 @@ export default class ProductsView extends React.Component {
             className: 'btn btn-success',
             onClick: () => {
               console.log('[PRODUCT] clicked', product);
+              window.dispatchEvent(new CustomEvent('product:added', { detail: product }));
             }
           }, `Buy for only $${product.price}`)
         ])]);
