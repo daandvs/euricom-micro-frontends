@@ -5,3 +5,4 @@
 3. implement connectedCallback(), disconnectedCallback()
 4. define custom element for dealers-app
 5. connectedCallback should call this.render()
+6. fetch() call in render() should attach innerHTML

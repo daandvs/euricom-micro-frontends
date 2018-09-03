@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import renderView from './render';
 import './styles.css';
 
 class Dealers {
@@ -14,8 +13,6 @@ class Dealers {
         return response.json();
       })
       .then((dealers) => {
-        this.innerHTML = renderView(dealers);
-
         this.detachListeners();
         this.attachListeners();
       })
