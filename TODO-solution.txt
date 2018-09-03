@@ -4,5 +4,8 @@
 2. [DEALERS] call super() in constructor
 3. [DEALERS] should implement connectedCallback(), disconnectedCallback()
 4. [DEALERS] should define custom element for dealers-app
+
+window.customElements.define('dealers-app', Dealers);
+
 5. [DEALERS] connectedCallback() should call this.render()
 6. [DEALERS] fetch() call in render() should attach innerHTML
