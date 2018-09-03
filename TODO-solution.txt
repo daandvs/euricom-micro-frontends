@@ -1,0 +1,15 @@
+// adapt in [DEALERS]
+
+1. [DEALERS] should change history state instead of dispatching an event
+
+window.history.pushState({ dealerId }, 'dealer', `/dealer/${dealerId}`);
+
+// adapt in [SHELL]
+
+1. [SHELL] should listen to history change
+
+window.history.onpopstate = window.history.onpushstate = (e) => {
+  if (e.state.dealerId) {
+    productsElement.setAttribute('dealer', e.state.dealerId);
+  }
+};

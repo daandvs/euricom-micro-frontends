@@ -1,0 +1,7 @@
+// adapt in [DEALERS]
+
+1. [DEALERS] should change history state instead of dispatching an event
+
+// adapt in [SHELL]
+
+1. [SHELL] should listen to history change
