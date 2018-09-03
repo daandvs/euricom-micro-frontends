@@ -1,0 +1,7 @@
+// adapt the dealers app so:
+
+1. class Dealers should extend HTMLElement
+2. call super() in constructor
+3. implement connectedCallback(), disconnectedCallback()
+4. define custom element for dealers-app
+5. connectedCallback should call this.render()

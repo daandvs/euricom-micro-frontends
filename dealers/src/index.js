@@ -1,20 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import renderView from './render';
 import './styles.css';
-class Dealers extends HTMLElement {
+
+class Dealers {
 
   constructor() {
-    super();
-
     this.buttons = [];
-  }
-
-  connectedCallback() {
-    this.render();
-  }
-
-  disconnectedCallback() {
-
   }
 
   render() {
@@ -49,5 +40,3 @@ class Dealers extends HTMLElement {
     console.log('[DEALER] clicked', dealerId);
   }
 }
-
-window.customElements.define('dealers-app', Dealers);
