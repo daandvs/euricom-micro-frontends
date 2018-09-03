@@ -35,12 +35,6 @@
 
   <script>
     const productsElement = document.getElementsByTagName('products-app')[0];
-
-    window.addEventListener('dealer:clicked', (e) => {
-      if (e.detail.dealerId) {
-        productsElement.setAttribute('dealer', e.detail.dealerId);
-      }
-    });
   </script>
 </body>
 </html>

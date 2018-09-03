@@ -1,0 +1,39 @@
+// adapt in Dealers
+
+1. [DEALERS] should dispatch event when dealer is clicked
+
+window.dispatchEvent(new CustomEvent('dealer:clicked', { detail: { dealerId } }));
+
+// adapt in [SHELL]
+
+1. [SHELL] should listen to dealers:clicked event
+
+window.addEventListener('dealer:clicked', (e) => {
+  
+});
+
+2. [SHELL] should set attribute on products-app
+
+if (e.detail.dealerId) {
+  productsElement.setAttribute('dealer', e.detail.dealerId);
+}
+
+// adapt in Products
+
+1. [PRODUCTS] should listen to attribute changed and call render
+
+attributeChangedCallback(attr, oldValue, newValue) {
+  this.render();
+}
+
+2. [PRODUCTS] should dispatch event when product is clicked
+
+window.dispatchEvent(new CustomEvent('product:added', { detail: product }));
+
+// adapt in Basket
+
+1. [BASKET] should listen to products:added event
+
+window.addEventListener('product:added', (e: CustomEvent) => {
+  this.products.push(e.detail);
+});

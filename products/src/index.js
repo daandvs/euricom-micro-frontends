@@ -18,8 +18,6 @@ class Products extends HTMLElement {
       this.root.setAttribute('id', 'root');
       this.appendChild(this.root);
     }
-
-    this.render();
   }
 
   disconnectedCallback() {

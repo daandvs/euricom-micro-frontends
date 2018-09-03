@@ -1,0 +1,17 @@
+// adapt in Dealers
+
+1. [DEALERS] should dispatch event when dealer is clicked
+
+// adapt in [SHELL]
+
+1. [SHELL] should listen to dealers:clicked event
+2. [SHELL] should set attribute on products-app
+
+// adapt in Products
+
+1. [PRODUCTS] should listen to attribute changed and call render
+2. [PRODUCTS] should dispatch event when product is clicked
+
+// adapt in Basket
+
+1. [BASKET] should listen to products:added event

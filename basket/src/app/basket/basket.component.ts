@@ -7,20 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketComponent implements OnInit {
 
-  products = [
-    {
-      id: 1,
-      name: 'Crystal Meth',
-      price: '3.5',
-      dealerId: 1
-    },
-    {
-      id: 2,
-      name: 'Blue Sky',
-      price: '5',
-      dealerId: 2
-    }
-  ];
+  products = [];
 
   constructor() { }
 
