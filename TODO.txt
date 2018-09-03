@@ -1,0 +1,9 @@
+// adapt [PRODUCTS]
+
+1. [PRODUCTS] server should have a /products-app route
+2. [PRODUCTS] server /products-app route should make request for products
+3. [PRODUCTS] server /products-app route should render html view based on retrieved products
+
+// adapt in [SHELL]
+
+1. [SHELL] should add server side includes

@@ -1,0 +1,37 @@
+// adapt [PRODUCTS]
+
+1. [PRODUCTS] server should have a /products-app route
+
+app.use('/products-app/dealer/:dealerId', (req, res) => {
+
+});
+
+2. [PRODUCTS] server /products-app route should make request for products
+
+import request from 'request';
+
+request(`http://localhost:3005/products?dealerId=${req.params.dealerId}`, (error, response, body) => {
+  
+});
+
+3. [PRODUCTS] server /products-app route should render html view based on retrieved products
+
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import ProductsView from './src/products-view';
+
+const products = JSON.parse(body);
+const renderedProductsView = renderToString(React.createElement(ProductsView, { products }));
+res.send(`<div id="root">${renderedProductsView}</div>`);
+
+// adapt in [SHELL]
+
+0. First show results with not server side includes
+
+1. [SHELL] should add server side includes
+
+<!--#include virtual="/basket-app" -->
+<!--#include virtual="/dealers-app" -->
+<!--#include virtual="/products-app/dealer/${dealerId}" -->
+
+2. Loopt through nginx config
