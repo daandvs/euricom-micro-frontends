@@ -26,7 +26,15 @@ res.send(`<div id="root">${renderedProductsView}</div>`);
 
 // adapt in [SHELL]
 
-0. First show results with not server side includes
+0. To start nginx
+
+sudo nginx
+
+0. To stop nginx
+
+sudo nginx -s stop
+
+0. First show results with no server side includes
 
 1. [SHELL] should add server side includes
 
@@ -34,4 +42,4 @@ res.send(`<div id="root">${renderedProductsView}</div>`);
 <!--#include virtual="/dealers-app" -->
 <!--#include virtual="/products-app/dealer/${dealerId}" -->
 
-2. Loopt through nginx config
+2. Loop through nginx config
